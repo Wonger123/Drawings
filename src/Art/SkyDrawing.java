@@ -14,7 +14,7 @@ public class SkyDrawing extends JFrame {
 
 	public static void main(String[] args) {
 		new SkyDrawing();
-	}
+	} /* HEYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY*/
 
 	SkyDrawing() {
 		this.setSize(900, 450);

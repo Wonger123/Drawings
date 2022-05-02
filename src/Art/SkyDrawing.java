@@ -18,7 +18,7 @@ public class SkyDrawing extends JFrame {
 
 	SkyDrawing() {
 		this.setSize(900, 450);
-		this.setTitle("Drawing for Jen");
+		this.setTitle("Drawing");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		DrawingPanel panel = new DrawingPanel();

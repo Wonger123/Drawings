@@ -1,7 +1,7 @@
 /* Andrew Wong
  * Apr.30.22
  * 
- * Drawing for Jen
+ * A drawing
  */
 package Art;
 
@@ -18,7 +18,7 @@ public class SkyDrawing extends JFrame {
 
 	SkyDrawing() {
 		this.setSize(900, 450);
-		this.setTitle("Drawing");
+		this.setTitle("Drawing 1");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		DrawingPanel panel = new DrawingPanel();
@@ -54,13 +54,6 @@ public class SkyDrawing extends JFrame {
 
 			// star
 			g.fillPolygon(star(g));
-			Point2D centre = new Point2D.Float(160, 202);
-			int radius = 17;
-			float[] dist = { 0.05f, .95f };
-			Color[] colours = { Color.decode("#727da4"), Color.decode("#d7eff1") };
-			RadialGradientPaint star = new RadialGradientPaint(centre, radius, dist, colours, CycleMethod.NO_CYCLE);
-			g2.setPaint(star);
-			g.fillOval(145, 187, 30, 30);
 
 			// rock
 			g.setColor(Color.decode("#722b53"));
@@ -71,7 +64,7 @@ public class SkyDrawing extends JFrame {
 
 			// castle
 			g.fillPolygon(castle(g));
-
+			
 			// ground
 			g.setColor(Color.decode("#4f8fb5"));
 			Polygon ground = new Polygon();
@@ -97,7 +90,7 @@ public class SkyDrawing extends JFrame {
 			g.fillRect(-getWidth(), -getHeight(), getWidth() * 3, getHeight() * 3);
 
 			g.setColor(Color.decode("#a4b6b8"));
-			for (int i = 0; i < 100; i++) {
+			for (int i = 0; i < 150; i++) {
 				int x = (int) (Math.random() * 899) + 1;
 				int y = (int) (Math.random() * 349) + 1;
 				g.fillRect(x, y, 2, 2);
@@ -214,6 +207,18 @@ public class SkyDrawing extends JFrame {
 
 		public Polygon wall(Graphics g) {
 			g.setColor(Color.decode("#0a0a37"));
+			
+			g.fillRoundRect(675, 285, 170, 70, 50, 50);
+			Polygon miniTower = new Polygon();
+			miniTower.addPoint(720, 285);
+			miniTower.addPoint(724, 275);
+			miniTower.addPoint(726, 275);
+			miniTower.addPoint(731, 250);
+			miniTower.addPoint(737, 275);
+			miniTower.addPoint(739, 275);
+			miniTower.addPoint(743, 285);
+			g.fillPolygon(miniTower);
+			
 			Polygon wall = new Polygon();
 			wall.addPoint(40, 310);
 
@@ -256,23 +261,31 @@ public class SkyDrawing extends JFrame {
 
 			g.setColor(Color.decode("#e1f6f7"));
 			Polygon fullStar = new Polygon();
-			fullStar.addPoint(155, 190);
-			fullStar.addPoint(160, 165);
-			fullStar.addPoint(165, 190);
-			fullStar.addPoint(178, 182);
-			fullStar.addPoint(172, 197);
-			fullStar.addPoint(197, 202);
-			fullStar.addPoint(171, 207);
-			fullStar.addPoint(178, 222);
-			fullStar.addPoint(165, 214);
-			fullStar.addPoint(160, 239);
-			fullStar.addPoint(155, 214);
-			fullStar.addPoint(140, 222);
-			fullStar.addPoint(148, 207);
-			fullStar.addPoint(123, 202);
-			fullStar.addPoint(149, 197);
-			fullStar.addPoint(140, 182);
+			fullStar.addPoint(155, 130);
+			fullStar.addPoint(160, 105);
+			fullStar.addPoint(165, 130);
+			fullStar.addPoint(178, 122);
+			fullStar.addPoint(172, 137);
+			fullStar.addPoint(197, 142);
+			fullStar.addPoint(171, 147);
+			fullStar.addPoint(178, 162);
+			fullStar.addPoint(165, 154);
+			fullStar.addPoint(160, 179);
+			fullStar.addPoint(155, 154);
+			fullStar.addPoint(140, 162);
+			fullStar.addPoint(148, 147);
+			fullStar.addPoint(123, 142);
+			fullStar.addPoint(149, 137);
+			fullStar.addPoint(140, 122);
 			g.fillPolygon(fullStar);
+			
+			Point2D centre = new Point2D.Float(160, 142);
+			int radius = 17;
+			float[] dist = { 0.05f, .95f };
+			Color[] colours = { Color.decode("#727da4"), Color.decode("#d7eff1") };
+			RadialGradientPaint star = new RadialGradientPaint(centre, radius, dist, colours, CycleMethod.NO_CYCLE);
+			g2.setPaint(star);
+			g.fillOval(145, 127, 30, 30);
 
 			return fullStar;
 		}

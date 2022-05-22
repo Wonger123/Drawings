@@ -5,10 +5,17 @@
  */
 package Art;
 
-import javax.swing.*;
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.MultipleGradientPaint.CycleMethod;
-import java.awt.geom.*;
+import java.awt.Polygon;
+import java.awt.RadialGradientPaint;
+import java.awt.RenderingHints;
+import java.awt.geom.Point2D;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 public class SkyDrawing extends JFrame {
 

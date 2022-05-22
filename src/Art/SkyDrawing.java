@@ -20,7 +20,7 @@ import javax.swing.JPanel;
 public class SkyDrawing extends JFrame {
 
 	public static void main(String[] args) {
-		new SkyDrawing();		
+		new SkyDrawing();
 	}
 
 	SkyDrawing() {
@@ -71,7 +71,7 @@ public class SkyDrawing extends JFrame {
 
 			// castle
 			g.fillPolygon(castle(g));
-			
+
 			// ground
 			g.setColor(Color.decode("#4f8fb5"));
 			Polygon ground = new Polygon();
@@ -214,7 +214,7 @@ public class SkyDrawing extends JFrame {
 
 		public Polygon wall(Graphics g) {
 			g.setColor(Color.decode("#0a0a37"));
-			
+
 			g.fillRoundRect(675, 285, 170, 70, 50, 50);
 			Polygon miniTower = new Polygon();
 			miniTower.addPoint(720, 285);
@@ -225,7 +225,7 @@ public class SkyDrawing extends JFrame {
 			miniTower.addPoint(739, 275);
 			miniTower.addPoint(743, 285);
 			g.fillPolygon(miniTower);
-			
+
 			Polygon wall = new Polygon();
 			wall.addPoint(40, 310);
 
@@ -236,7 +236,7 @@ public class SkyDrawing extends JFrame {
 			wall.addPoint(166, 300);
 			wall.addPoint(168, 300);
 			wall.addPoint(170, 310);
-			
+
 			wall.addPoint(290, 310);
 			wall.addPoint(292, 305);
 			wall.addPoint(294, 305);
@@ -285,7 +285,7 @@ public class SkyDrawing extends JFrame {
 			fullStar.addPoint(149, 137);
 			fullStar.addPoint(140, 122);
 			g.fillPolygon(fullStar);
-			
+
 			Point2D centre = new Point2D.Float(160, 142);
 			int radius = 17;
 			float[] dist = { 0.05f, .95f };
